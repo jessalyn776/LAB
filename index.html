@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz Question Manager</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Quiz Question Manager</h1>
+
+    <!-- CREATE / UPDATE FORM -->
+    <form id="quizForm">
+        <input type="hidden" id="questionId" />
+        <label>Question:</label>
+        <input type="text" id="question" placeholder="Enter your question" required />
+
+        <label>Option A:</label>
+        <input type="text" id="optionA" placeholder="Option A" required />
+
+        <label>Option B:</label>
+        <input type="text" id="optionB" placeholder="Option B" required />
+
+        <label>Option C:</label>
+        <input type="text" id="optionC" placeholder="Option C" required />
+
+        <label>Option D:</label>
+        <input type="text" id="optionD" placeholder="Option D" required />
+
+        <label>Correct Answer (A/B/C/D):</label>
+        <input type="text" id="correct" maxlength="1" placeholder="A" required />
+
+        <button type="submit" id="saveBtn">Add Question</button>
+    </form>
+
+    <h2>Quiz Questions</h2>
+    <table>
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Question</th>
+            <th>Correct</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody id="quizList"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
